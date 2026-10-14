@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;placa_display/Core/Src/timers&apos; to &apos;timers.c&apos;" description="Rename resource &apos;timers&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Src/timers" name="timers.c" stamp="1746012211876" updateReferences="true"/>
+</session>

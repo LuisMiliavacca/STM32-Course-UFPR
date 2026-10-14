@@ -1,0 +1,9 @@
+14:12:59 **** Build of configuration Debug for project test ****
+make all 
+Cannot run program "make": Launching failed
+
+Error: Program "make" not found in PATH
+PATH=[C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE//plugins/com.st.stm32cube.ide.jre.win64_3.4.0.202409160955/jre/bin/server;C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE//plugins/com.st.stm32cube.ide.jre.win64_3.4.0.202409160955/jre/bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Wolfram Research\WolframScript\;C:\Program Files\dotnet\;C:\Program Files\MATLAB\R2023b\runtime\win64;C:\Program Files\MATLAB\R2023b\bin;C:\Program Files\Git\cmd;C:\Users\luiso\AppData\Local\Programs\Python\Launcher\;C:\Users\luiso\AppData\Local\Microsoft\WindowsApps;C:\Users\luiso\AppData\Local\Programs\MiKTeX\miktex\bin\x64\;C:\Users\luiso\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\luiso\AppData\Local\GitHubDesktop\bin;;C:\ST\STM32CubeIDE_1.18.0\STM32CubeIDE]
+
+14:12:59 Build Failed. 1 errors, 0 warnings. (took 115ms)
+

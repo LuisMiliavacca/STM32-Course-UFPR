@@ -1,0 +1,10 @@
+09:37:12 **** Incremental Build of configuration Debug for project cronometro_placa_7seg ****
+make -j8 all 
+arm-none-eabi-size  cronometro_placa_7seg.elf 
+   text	   data	    bss	    dec	    hex	filename
+  20636	    116	   2212	  22964	   59b4	cronometro_placa_7seg.elf
+Finished building: default.size.stdout
+ 
+
+09:37:12 Build Finished. 0 errors, 0 warnings. (took 316ms)
+

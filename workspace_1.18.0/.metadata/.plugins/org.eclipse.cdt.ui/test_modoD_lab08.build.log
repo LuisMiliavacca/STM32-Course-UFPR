@@ -1,0 +1,17 @@
+14:39:51 **** Incremental Build of configuration Debug for project test_modoD_lab08 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G491xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "test_modoD_lab08.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\luiso\STM32CubeIDE\workspace_1.18.0\test_modoD_lab08\STM32G491RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test_modoD_lab08.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: test_modoD_lab08.elf
+ 
+arm-none-eabi-size  test_modoD_lab08.elf 
+arm-none-eabi-objdump -h -S test_modoD_lab08.elf  > "test_modoD_lab08.list"
+   text	   data	    bss	    dec	    hex	filename
+  17456	     16	   1776	  19248	   4b30	test_modoD_lab08.elf
+Finished building: default.size.stdout
+ 
+Finished building: test_modoD_lab08.list
+ 
+
+14:39:53 Build Finished. 0 errors, 0 warnings. (took 2s.115ms)
+

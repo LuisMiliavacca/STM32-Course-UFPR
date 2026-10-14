@@ -1,0 +1,185 @@
+08:31:28 **** Incremental Build of configuration Debug for project projeto_final ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/ssd1306.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ssd1306.d" -MT"Core/Src/ssd1306.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ssd1306.o"
+arm-none-eabi-gcc -o "projeto_final.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\luiso\STM32CubeIDE\workspace_1.18.0\projeto_final\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projeto_final.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projeto_final.elf
+ 
+arm-none-eabi-size  projeto_final.elf 
+arm-none-eabi-objdump -h -S projeto_final.elf  > "projeto_final.list"
+   text	   data	    bss	    dec	    hex	filename
+  22804	    104	   3656	  26564	   67c4	projeto_final.elf
+Finished building: default.size.stdout
+ 
+Finished building: projeto_final.list
+ 
+08:31:46 **** Incremental Build of configuration Debug for project projeto_final ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/ssd1306.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ssd1306.d" -MT"Core/Src/ssd1306.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ssd1306.o"
+arm-none-eabi-gcc -o "projeto_final.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\luiso\STM32CubeIDE\workspace_1.18.0\projeto_final\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projeto_final.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projeto_final.elf
+ 
+arm-none-eabi-size  projeto_final.elf 
+arm-none-eabi-objdump -h -S projeto_final.elf  > "projeto_final.list"
+   text	   data	    bss	    dec	    hex	filename
+  22804	    104	   3656	  26564	   67c4	projeto_final.elf
+Finished building: default.size.stdout
+ 
+Finished building: projeto_final.list
+ 
+08:35:11 **** Incremental Build of configuration Debug for project projeto_final ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "projeto_final.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\luiso\STM32CubeIDE\workspace_1.18.0\projeto_final\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projeto_final.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projeto_final.elf
+ 
+arm-none-eabi-size  projeto_final.elf 
+arm-none-eabi-objdump -h -S projeto_final.elf  > "projeto_final.list"
+   text	   data	    bss	    dec	    hex	filename
+  22808	    104	   3656	  26568	   67c8	projeto_final.elf
+Finished building: default.size.stdout
+ 
+Finished building: projeto_final.list
+ 
+08:36:43 **** Incremental Build of configuration Debug for project projeto_final ****
+make -j8 all 
+arm-none-eabi-size  projeto_final.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22808	    104	   3656	  26568	   67c8	projeto_final.elf
+Finished building: default.size.stdout
+ 
+08:40:33 **** Incremental Build of configuration Debug for project projeto_final ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/ssd1306.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ssd1306.d" -MT"Core/Src/ssd1306.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ssd1306.o"
+arm-none-eabi-gcc -o "projeto_final.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\luiso\STM32CubeIDE\workspace_1.18.0\projeto_final\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projeto_final.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projeto_final.elf
+ 
+arm-none-eabi-size  projeto_final.elf 
+arm-none-eabi-objdump -h -S projeto_final.elf  > "projeto_final.list"
+   text	   data	    bss	    dec	    hex	filename
+  24328	    104	   3656	  28088	   6db8	projeto_final.elf
+Finished building: default.size.stdout
+ 
+Finished building: projeto_final.list
+ 
+08:43:41 **** Incremental Build of configuration Debug for project projeto_final ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/ssd1306.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ssd1306.d" -MT"Core/Src/ssd1306.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ssd1306.o"
+arm-none-eabi-gcc -o "projeto_final.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\luiso\STM32CubeIDE\workspace_1.18.0\projeto_final\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projeto_final.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projeto_final.elf
+ 
+arm-none-eabi-size  projeto_final.elf 
+arm-none-eabi-objdump -h -S projeto_final.elf  > "projeto_final.list"
+   text	   data	    bss	    dec	    hex	filename
+  22804	    104	   3656	  26564	   67c4	projeto_final.elf
+Finished building: default.size.stdout
+ 
+Finished building: projeto_final.list
+ 
+08:46:34 **** Incremental Build of configuration Debug for project projeto_final ****
+make -j8 all 
+arm-none-eabi-size  projeto_final.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22804	    104	   3656	  26564	   67c4	projeto_final.elf
+Finished building: default.size.stdout
+ 
+08:49:07 **** Incremental Build of configuration Debug for project projeto_final ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/ssd1306.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ssd1306.d" -MT"Core/Src/ssd1306.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ssd1306.o"
+arm-none-eabi-gcc -o "projeto_final.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\luiso\STM32CubeIDE\workspace_1.18.0\projeto_final\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projeto_final.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projeto_final.elf
+ 
+arm-none-eabi-size  projeto_final.elf 
+arm-none-eabi-objdump -h -S projeto_final.elf  > "projeto_final.list"
+   text	   data	    bss	    dec	    hex	filename
+  24324	    104	   3656	  28084	   6db4	projeto_final.elf
+Finished building: default.size.stdout
+ 
+Finished building: projeto_final.list
+ 
+09:11:19 **** Incremental Build of configuration Debug for project projeto_final ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "projeto_final.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\luiso\STM32CubeIDE\workspace_1.18.0\projeto_final\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projeto_final.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projeto_final.elf
+ 
+arm-none-eabi-size  projeto_final.elf 
+arm-none-eabi-objdump -h -S projeto_final.elf  > "projeto_final.list"
+   text	   data	    bss	    dec	    hex	filename
+  24324	    104	   3656	  28084	   6db4	projeto_final.elf
+Finished building: default.size.stdout
+ 
+Finished building: projeto_final.list
+ 
+09:12:49 **** Incremental Build of configuration Debug for project projeto_final ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/ssd1306.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ssd1306.d" -MT"Core/Src/ssd1306.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ssd1306.o"
+arm-none-eabi-gcc -o "projeto_final.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\luiso\STM32CubeIDE\workspace_1.18.0\projeto_final\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projeto_final.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projeto_final.elf
+ 
+arm-none-eabi-size  projeto_final.elf 
+arm-none-eabi-objdump -h -S projeto_final.elf  > "projeto_final.list"
+   text	   data	    bss	    dec	    hex	filename
+  22804	    104	   3656	  26564	   67c4	projeto_final.elf
+Finished building: default.size.stdout
+ 
+Finished building: projeto_final.list
+ 
+09:14:56 **** Incremental Build of configuration Debug for project projeto_final ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/ssd1306.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ssd1306.d" -MT"Core/Src/ssd1306.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ssd1306.o"
+arm-none-eabi-gcc -o "projeto_final.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\luiso\STM32CubeIDE\workspace_1.18.0\projeto_final\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projeto_final.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projeto_final.elf
+ 
+arm-none-eabi-size  projeto_final.elf 
+arm-none-eabi-objdump -h -S projeto_final.elf  > "projeto_final.list"
+   text	   data	    bss	    dec	    hex	filename
+  22804	    104	   3656	  26564	   67c4	projeto_final.elf
+Finished building: default.size.stdout
+ 
+Finished building: projeto_final.list
+ 
+09:28:52 **** Incremental Build of configuration Debug for project projeto_final ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/ssd1306.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ssd1306.d" -MT"Core/Src/ssd1306.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ssd1306.o"
+arm-none-eabi-gcc -o "projeto_final.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\luiso\STM32CubeIDE\workspace_1.18.0\projeto_final\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projeto_final.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projeto_final.elf
+ 
+arm-none-eabi-size  projeto_final.elf 
+arm-none-eabi-objdump -h -S projeto_final.elf  > "projeto_final.list"
+   text	   data	    bss	    dec	    hex	filename
+  22896	    104	   3656	  26656	   6820	projeto_final.elf
+Finished building: default.size.stdout
+ 
+Finished building: projeto_final.list
+ 
+09:30:06 **** Incremental Build of configuration Debug for project projeto_final ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/ssd1306.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ssd1306.d" -MT"Core/Src/ssd1306.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ssd1306.o"
+arm-none-eabi-gcc -o "projeto_final.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\luiso\STM32CubeIDE\workspace_1.18.0\projeto_final\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projeto_final.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projeto_final.elf
+ 
+arm-none-eabi-size  projeto_final.elf 
+arm-none-eabi-objdump -h -S projeto_final.elf  > "projeto_final.list"
+   text	   data	    bss	    dec	    hex	filename
+  22804	    104	   3656	  26564	   67c4	projeto_final.elf
+Finished building: default.size.stdout
+ 
+Finished building: projeto_final.list
+ 
+17:10:57 **** Build of configuration Debug for project projeto_final ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "projeto_final.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\luiso\STM32CubeIDE\workspace_1.18.0\projeto_final\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projeto_final.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: projeto_final.elf
+ 
+arm-none-eabi-size  projeto_final.elf 
+arm-none-eabi-objdump -h -S projeto_final.elf  > "projeto_final.list"
+   text	   data	    bss	    dec	    hex	filename
+  22760	    104	   3656	  26520	   6798	projeto_final.elf
+Finished building: default.size.stdout
+ 
+Finished building: projeto_final.list
+ 

@@ -1,0 +1,158 @@
+#include "main.h"
+#include "modoA.h"
+#include "modoC.h"
+#include "modoD.h"
+#include "timers.h"
+#include "interrup.h"
+#include <stdio.h>
+#include <string.h>
+
+int i=0, N=0;
+int Nx=0,Ny=0;
+char N_OLED[100];
+int iOLED=0;
+int iBT=0;
+
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
+	if(htim->Instance == TIM1){
+		if(flagC){
+			HAL_ADC_Start_IT(&hadc1); //da trigger na interrupção do timer para fazer leiura
+			if((GPIOB -> IDR & 0x0004)==0){
+				i_config++;
+			}
+			else{
+				i_config=1;
+			}
+			if(i_config==150){ //seta a flag de configuração como 1 quando passar o tempo estipulado
+				flag_conf=1;
+			}
+		}
+		iOLED++;
+		if(iOLED==20){
+			flagOLED=1;
+			iOLED=0;
+		}
+		if(iBT>=50){
+			if(flagA){
+				HAL_UART_Transmit(&huart5, cont7seg_OLED, strlen(cont7seg_OLED), 10);
+			}
+			if(flagB){
+				HAL_UART_Transmit(&huart5, N_OLED, strlen(N_OLED), 10);
+			}
+			if(flagC){
+				HAL_UART_Transmit(&huart5, valorPWM_OLED, strlen(valorPWM_OLED), 10);
+			}
+			if(flagD){
+				HAL_UART_Transmit(&huart5, eixoX_OLED, strlen(eixoX_OLED), 10);
+				HAL_UART_Transmit(&huart5, " ", 1, 10);
+				HAL_UART_Transmit(&huart5, eixoY_OLED, strlen(eixoY_OLED), 10);
+			}
+		}
+	}
+	if(htim->Instance == TIM3){
+		if(flagA){
+			if(flag_count){
+				contador7seg++;
+			}
+			if(contador7seg>9999){
+				contador7seg=0;
+			}
+		}
+	}
+	if(htim->Instance == TIM4){
+		if(flagA){
+			Atualiza7seg(contador7seg);
+		}
+		if(flagC){
+			if(flag_conf){
+				if(curr7seg < 4)
+				{
+					GPIOC->ODR |= 0xFF;
+					escrevefloat(leitura_ADCpercent); //escreve o valor da leitura do ADC%
+					curr7seg++;
+				}else{
+					GPIOC->ODR &= 0x00FF;
+					if(flag_red){
+						Print8x8(0,linha);
+						linha++;
+					}
+					if(flag_green){
+						Print8x8(1,linha);
+						linha++;
+					}
+					if(flag_blue){
+						Print8x8(2,linha); //escreve em cada linha da matriz de led
+						linha++;
+					}
+					if(linha==8){
+						linha=0;
+						curr7seg = 0;
+					}
+				}
+			}
+			else{
+				GPIOC->ODR |= 0xFF;
+				escrevefloat(0);
+				if(++curr7seg>=4)
+					curr7seg = 0;
+			}
+		}
+
+		}
+
+	if(htim->Instance == TIM8){
+		if(flagB){
+			i++;
+			if(i==20){
+				if(flag_horario){
+					if(N==6){
+						N=0;
+					}
+					GPIOB -> ODR &= 0x00FF;
+					GPIOB -> ODR |= 0x100 << N; //acende um dos leds e zera os outros
+					N=N+1;
+				}
+				if(flag_antihorario){
+					if(N==6){
+						N=0;
+						}
+						GPIOB -> ODR &= 0x00FF;
+						GPIOB -> ODR |= 0x2000 >> N; //acende um dos leds e zera os outros
+						N=N+1;
+				}
+				i=0;
+				sprintf(N_OLED,"posição=%d",N);
+			}
+		}
+		if(flagD){
+			HAL_ADC_Start_IT(&hadc3);
+			if(eixoX>=3000){
+				Nx=Nx-1;
+			}
+			if(eixoX<=1500){
+				Nx=Nx+1;
+			}
+			if(eixoY>=3000){
+				Ny=Ny-1;
+			}
+			if(eixoY<=1500){
+				Ny=Ny+1;
+			}
+			if(Nx>6){
+				Nx=6;
+			}
+			if(Nx<0){
+				Nx=0;
+			}
+			if(Ny>6){
+				Ny=6;
+			}
+			if(Ny<0){
+				Ny=0;
+			}
+			GPIOB -> ODR = 0x0300 << Ny;
+			GPIOC -> ODR = 0xFF3F >> Nx;
+			GPIOC -> ODR &= 0xF0FF;
+		}
+	}
+}

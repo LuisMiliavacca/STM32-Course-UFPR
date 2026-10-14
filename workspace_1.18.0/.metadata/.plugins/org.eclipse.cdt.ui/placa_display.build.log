@@ -1,0 +1,88 @@
+08:38:50 **** Build of configuration Debug for project placa_display ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/display7seg.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_NUCLEO_64 -DUSE_HAL_DRIVER -DSTM32G491xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/BSP/STM32G4xx_Nucleo -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/display7seg.d" -MT"Core/Src/display7seg.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/display7seg.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_NUCLEO_64 -DUSE_HAL_DRIVER -DSTM32G491xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/BSP/STM32G4xx_Nucleo -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/timers.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_NUCLEO_64 -DUSE_HAL_DRIVER -DSTM32G491xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/BSP/STM32G4xx_Nucleo -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/timers.d" -MT"Core/Src/timers.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/timers.o"
+In file included from ../Core/Src/display7seg.c:2:
+../Core/Inc/display7seg.h:8:12: warning: 'curr7seg' initialized and declared 'extern'
+    8 | extern int curr7seg =1;
+      |            ^~~~~~~~
+In file included from ../Core/Src/main.c:21:
+../Core/Inc/timers.h:10:6: error: conflicting types for 'HAL_TIM_PeriodElapsedCallback'; have 'void(TIM_HandleTypeDef)'
+   10 | void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../Core/Src/timers.c:2:
+../Core/Inc/display7seg.h:8:12: warning: 'curr7seg' initialized and declared 'extern'
+    8 | extern int curr7seg =1;
+      |            ^~~~~~~~
+In file included from ../Core/Inc/stm32g4xx_hal_conf.h:344,
+                 from ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h:2529:6: note: previous declaration of 'HAL_TIM_PeriodElapsedCallback' with type 'void(TIM_HandleTypeDef *)'
+ 2529 | void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../Core/Src/timers.c:3:
+../Core/Inc/timers.h:10:6: error: conflicting types for 'HAL_TIM_PeriodElapsedCallback'; have 'void(TIM_HandleTypeDef)'
+   10 | void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../Core/Src/main.c:22:
+../Core/Inc/display7seg.h:8:12: warning: 'curr7seg' initialized and declared 'extern'
+    8 | extern int curr7seg =1;
+      |            ^~~~~~~~
+In file included from ../Core/Inc/stm32g4xx_hal_conf.h:344,
+                 from ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/timers.c:1:
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h:2529:6: note: previous declaration of 'HAL_TIM_PeriodElapsedCallback' with type 'void(TIM_HandleTypeDef *)'
+ 2529 | void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/timers.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/display7seg.c:34:6: error: conflicting types for 'atualiza7seg'; have 'void(int)'
+   34 | void atualiza7seg(int contador7seg){
+      |      ^~~~~~~~~~~~
+../Core/Inc/display7seg.h:10:6: note: previous declaration of 'atualiza7seg' with type 'void(int,  int)'
+   10 | void atualiza7seg(int,int);
+      |      ^~~~~~~~~~~~
+../Core/Src/timers.c:9:16: warning: comparison of distinct pointer types lacks a cast
+    9 |         if(htim==TIM3){
+      |                ^~
+../Core/Src/display7seg.c: In function 'atualiza7seg':
+../Core/Src/display7seg.c:38:41: error: invalid operands to binary % (have 'int' and 'double')
+   38 |                 valor[i-1]=contador7seg % (pow(10,i));
+      |                                         ^ ~~~~~~~~~~~
+      |                                            |
+      |                                            double
+../Core/Src/timers.c:12:28: error: expected expression before ')' token
+   12 |                         if()
+      |                            ^
+../Core/Src/timers.c:15:16: warning: comparison of distinct pointer types lacks a cast
+   15 |         if(htim==TIM4){
+      |                ^~
+../Core/Src/display7seg.c:35:23: warning: unused variable 'ponto' [-Wunused-variable]
+   35 |         int valor[4], ponto=0;
+      |                       ^~~~~
+../Core/Src/display7seg.c:35:13: warning: variable 'valor' set but not used [-Wunused-but-set-variable]
+   35 |         int valor[4], ponto=0;
+      |             ^~~~~
+../Core/Src/timers.c:16:17: warning: implicit declaration of function 'Atualiza7seg'; did you mean 'atualiza7seg'? [-Wimplicit-function-declaration]
+   16 |                 Atualiza7seg(contador7seg);
+      |                 ^~~~~~~~~~~~
+      |                 atualiza7seg
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:131:11: error: 'contador7seg' undeclared (first use in this function)
+  131 |           contador7seg++;
+      |           ^~~~~~~~~~~~
+../Core/Src/main.c:131:11: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:135:11: warning: implicit declaration of function 'Atualiza7seg'; did you mean 'atualiza7seg'? [-Wimplicit-function-declaration]
+  135 |           Atualiza7seg(contador7seg);
+      |           ^~~~~~~~~~~~
+      |           atualiza7seg
+make: *** [Core/Src/subdir.mk:40: Core/Src/display7seg.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [Core/Src/subdir.mk:40: Core/Src/timers.o] Error 1
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+
+08:38:53 Build Failed. 10 errors, 9 warnings. (took 2s.179ms)
+
